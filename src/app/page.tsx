@@ -1,13 +1,28 @@
+import Hero from "@/components/hero/Hero";
+import NewPost from "@/components/new-post/NewPost";
+
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between p-24'>
+    <main className='flex min-h-screen flex-col items-center justify-between pb-24'>
       <div>
-        <p className="text-lg">
-          ashiapp Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Reiciendis tempora soluta veniam eaque dignissimos. Illo quam eaque,
-          officiis eos dolores perspiciatis harum dolor? Id esse est neque iure
-          placeat! Exercitationem.
-        </p>
+        <Hero />
+      </div>
+      <div className='px-24 mt-20 grid grid-cols-2 gap-5'>
+
+        {/* new post */}
+        <div>
+          <p className='text-3xl text-black mb-8 font-bold'>New Post</p>
+          <NewPost />
+          <NewPost />
+          <NewPost />
+        </div>
+        {/* new post */}
+        {/* new post */}
+        <div>
+          <p className='text-3xl text-black mb-8 font-bold'>New Post</p>
+          <NewPost />
+        </div>
+        {/* new post */}
       </div>
     </main>
   );
