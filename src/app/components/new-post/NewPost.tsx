@@ -1,18 +1,14 @@
 import React from "react";
 import ButtonBase from "@/common/Button";
 import ImageBase from "@/common/ImageBase";
+import AuthorText from "@/common/AuthorText";
 
 export default function NewPost() {
   return (
     <div className='border border-gray-500 px-8 pt-14 pb-6 border-opacity-10 h-fit mt-4'>
       <ImageBase src='/bg-hero.jpg' />
 
-      {/* author info */}
-      <div className='text-medium-gray mt-8'>
-        <p>
-          By <span className='text-purple'>Ariel Febrian</span> | May 23, 2022
-        </p>
-      </div>
+      <AuthorText date='May 23, 2023' name='Ariel Febrian' classname="mt-10" />
 
       {/* content info */}
       <div className='text-medium-gray'>
