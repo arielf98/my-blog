@@ -2,6 +2,7 @@ import Hero from "@/components/hero/Hero";
 import NewPost from "@/components/new-post/NewPost";
 import AllPost from "@/components/all-post/AllPost";
 import Link from "next/link";
+import AboutMe from "@/components/about-me/AboutMe";
 
 export default function Home() {
   return (
@@ -16,14 +17,15 @@ export default function Home() {
           <p className='text-3xl text-black mb-8 font-bold'>New Post</p>
           <NewPost />
           <NewPost />
-          <NewPost />
         </div>
         {/* new post */}
 
         {/* all post */}
         <div>
-          <div className="flex justify-between items-center">
-            <p className='text-3xl text-black mb-8 font-bold'>All Post</p>
+          <div className='flex justify-between items-center'>
+            <Link href='/'>
+              <p className='text-3xl text-black mb-8 font-bold hover:text-custom-secondary'>All Post</p>
+            </Link>
             <Link href='/'>
               <p className='text-purple'>View All</p>
             </Link>
@@ -32,6 +34,7 @@ export default function Home() {
         </div>
         {/* all post */}
       </div>
+      <AboutMe />
     </main>
   );
 }
