@@ -23,7 +23,7 @@ export default function Home() {
         {/* all post */}
         <div>
           <div className='flex justify-between items-center'>
-            <Link href='/'>
+            <Link href='/blog'>
               <p className='text-3xl text-black mb-8 font-bold hover:text-custom-secondary'>All Post</p>
             </Link>
             <Link href='/'>
