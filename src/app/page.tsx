@@ -1,5 +1,7 @@
 import Hero from "@/components/hero/Hero";
 import NewPost from "@/components/new-post/NewPost";
+import AllPost from "@/components/all-post/AllPost";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -7,22 +9,28 @@ export default function Home() {
       <div>
         <Hero />
       </div>
-      <div className='px-24 mt-20 grid grid-cols-2 gap-5'>
 
+      <div className='px-24 mt-20 grid grid-cols-3 gap-5'>
         {/* new post */}
-        <div>
+        <div className='col-span-2'>
           <p className='text-3xl text-black mb-8 font-bold'>New Post</p>
           <NewPost />
           <NewPost />
           <NewPost />
         </div>
         {/* new post */}
-        {/* new post */}
+
+        {/* all post */}
         <div>
-          <p className='text-3xl text-black mb-8 font-bold'>New Post</p>
-          <NewPost />
+          <div className="flex justify-between items-center">
+            <p className='text-3xl text-black mb-8 font-bold'>All Post</p>
+            <Link href='/'>
+              <p className='text-purple'>View All</p>
+            </Link>
+          </div>
+          <AllPost />
         </div>
-        {/* new post */}
+        {/* all post */}
       </div>
     </main>
   );
